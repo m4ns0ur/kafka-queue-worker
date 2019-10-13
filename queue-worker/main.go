@@ -194,7 +194,7 @@ MAINLOOP:
 		case err = <- consumer.Errors():
 			fmt.Println("consumer error: ",err)
 		case ntf := <- consumer.Notifications():
-			fmt.Println("Rebalanced: %+v\n", ntf)
+			fmt.Printf("Rebalanced: %+v\n", ntf)
 		}
 	}
 }
